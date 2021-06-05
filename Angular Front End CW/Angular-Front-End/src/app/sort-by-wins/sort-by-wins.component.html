@@ -1,0 +1,57 @@
+<html>
+<head>
+  <style>
+    .centered {
+      position:absolute;
+      top: 20%;
+      left: 15%;
+      align-content: center;
+    }
+
+  </style>
+</head>
+<body>
+<div class="centered">
+  <h1 class="text-primary">Premier League Table Sorted According to Number of Wins</h1>
+  <table class="table  table-hover">
+    <thead>
+    <tr class="table-primary">
+      <th scope="col">Club Name</th>
+      <th scope="col">Club Location</th>
+      <th scope="col">ClubType</th>
+      <th scope="col">Number Of Goals</th>
+      <th scope="col">Goals Received</th>
+      <th scope="col">Goal Difference</th>
+      <th scope="col">Total Points</th>
+      <th scope="col">Matches Played</th>
+      <th scope="col">Number Of Wins</th>
+      <th scope="col">Number of Draws</th>
+      <th scope="col">Number of Defeats</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="table-light" *ngFor="let sortByWins of  sortedWinsTable"><!--Adding the Sorted arraylist by number of wins to the table-->
+      <td>{{ sortByWins.clubName }}</td>
+      <td>{{ sortByWins.clubLocation }}</td>
+      <td>{{ sortByWins.clubType}}</td>
+      <td>{{ sortByWins.goalScored}}</td>
+      <td>{{ sortByWins.goalsReceived}}</td>
+      <td>{{ sortByWins.goalDifference}}</td>
+      <td>{{ sortByWins.totalPoints}}</td>
+      <td>{{ sortByWins.matchesPlayed}}</td>
+      <td>{{ sortByWins.numberOfWins}}</td>
+      <td>{{ sortByWins.numberOfDraws}}</td>
+      <td>{{ sortByWins.numberOfDefeats}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+

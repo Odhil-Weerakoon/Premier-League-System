@@ -1,0 +1,57 @@
+<html>
+<head>
+  <style>
+    .centered {
+      position:absolute;
+      top: 15%;
+      left: 15%;
+      align-content: center;
+
+    }
+    </style>
+</head>
+<body>
+  <div class="centered">
+    <h1 class="text-primary">Premier League Table</h1> <!--Heading-->
+    <table class="table  table-hover">
+    <thead>
+      <tr class="table-primary">           <!--Creating the table Columns-->
+        <th scope="col">Club Name</th>
+        <th scope="col">Club Location</th>
+        <th scope="col">ClubType</th>
+        <th scope="col">Number Of Goals</th>
+        <th scope="col">Goals Received</th>
+        <th scope="col">Goal Difference</th>
+        <th scope="col">Total Points</th>
+        <th scope="col">Matches Played</th>
+        <th scope="col">Number Of Wins</th>
+        <th scope="col">Number of Draws</th>
+        <th scope="col">Number of Defeats</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="table-light" *ngFor="let premierLeague of  premierLeagueTable"> <!--Adding the Data from the Arraylist send into the table-->
+            <td>{{ premierLeague.clubName }}</td>
+            <td>{{ premierLeague.clubLocation }}</td>
+            <td>{{ premierLeague.clubType}}</td>
+            <td>{{ premierLeague.goalScored}}</td>
+            <td>{{ premierLeague.goalsReceived}}</td>
+            <td>{{ premierLeague.goalDifference}}</td>
+            <td>{{ premierLeague.totalPoints}}</td>
+            <td>{{ premierLeague.matchesPlayed}}</td>
+            <td>{{ premierLeague.numberOfWins}}</td>
+            <td>{{ premierLeague.numberOfDraws}}</td>
+            <td>{{ premierLeague.numberOfDefeats}}</td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+

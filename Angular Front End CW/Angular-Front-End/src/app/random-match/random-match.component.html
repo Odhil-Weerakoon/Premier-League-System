@@ -1,0 +1,64 @@
+<html>
+<head>
+  <style>
+    .centered {
+      position:absolute;
+      top: 20%;
+      left: 30%;
+      justify-content: center;
+
+    }
+    .center{
+      position: relative;
+      top: 6%;
+      left: 35%;
+
+    }
+  </style>
+</head>
+<body>
+
+<div class="centered">
+  <h1 class="text-primary">Matches Played between Teams in the Premier League</h1> <!--Heading-->
+  <br>
+  <form class="" (ngSubmit)="playMatch()">  <!--Calling the playMatch() method everytime the button is pressed-->
+    <div class="center">
+      <button type="submit" class="nav-link btn btn-primary   p-3 mb-4 ">Play Random Match</button>
+    </div>
+  </form>
+  <br>
+  <br>
+  <table class="table  table-hover">
+    <thead>
+    <tr class="table-primary">
+      <th scope="col">Match Date</th>
+      <th scope="col">First Club</th>
+      <th scope="col">Second Club</th>
+      <th scope="col">First Club Goals</th>
+      <th scope="col">Second Club Goals</th>
+      <th scope="col">Result</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="table-light" *ngFor="let randomMatch of  randomMatchTable">  <!--Adding all the Random and Played macthes to the table from the send arraylist-->
+      <td>{{ randomMatch.matchDate }}</td>
+      <td>{{ randomMatch.firstClub }}</td>
+      <td>{{ randomMatch. secondClub}}</td>
+      <td>{{ randomMatch.firstClubGoals}}</td>
+      <td>{{ randomMatch.secondClubGoals}}</td>
+      <td>{{ randomMatch.result}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+

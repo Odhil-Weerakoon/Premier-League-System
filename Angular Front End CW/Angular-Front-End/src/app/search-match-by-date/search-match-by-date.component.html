@@ -1,0 +1,58 @@
+<html>
+<head>
+  <style>
+    .centered {
+      position:absolute;
+      top: 20%;
+      left: 30%;
+      align-content: center;
+    }
+    h1 {text-align: center;}
+  </style>
+</head>
+<body>
+<div class="centered">
+  <h1>Search Played Match by Date</h1>
+  <br>
+  <div class="container-fluid">
+  <form class="d-flex">
+    <input class="form-control me-2" type="string" placeholder="Enter the Date of the played Match in the format DD-MM-YYYY" name="date" [(ngModel)]="date">
+    <button class="btn btn-outline-success" type="button" (click)="sendMatchDate()">Search</button>  <!--Calling the sendMacthDate method everytime the button is pressed-->
+  </form>
+</div>
+  <br>
+  <br>
+  <table class="table  table-hover">
+    <thead>
+    <tr class="table-primary">
+      <th scope="col">Match Date</th>
+      <th scope="col">First Club</th>
+      <th scope="col">Second Club</th>
+      <th scope="col">First Club Goals</th>
+      <th scope="col">Second Club Goals</th>
+      <th scope="col">Result</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="table-light" *ngFor="let sortByDate of  searchDateTable">  <!--Adding the Sent Match detail searched by the date to the table-->
+      <td>{{ sortByDate.matchDate }}</td>
+      <td>{{ sortByDate.firstClub }}</td>
+      <td>{{ sortByDate.secondClub}}</td>
+      <td>{{ sortByDate.firstClubGoals}}</td>
+      <td>{{ sortByDate.secondClubGoals}}</td>
+      <td>{{ sortByDate.result}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

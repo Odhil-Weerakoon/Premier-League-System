@@ -1,0 +1,55 @@
+<html>
+<head>
+  <style>
+    .navbar {
+      position: relative;
+    }
+    html{
+      background: url("assets/images/background.jpg");
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-attachment: fixed;
+      height:200em;
+      width:auto;
+    }
+  </style>
+</head>
+<body>
+<div class="navbar">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">   <!--NavBar of the Main Page-->
+    <div class="container-fluid">
+      <img src="assets/images/logo.jpg" alt="Premier League Logo" width="5%" height="3%">   <!--Adding the logo of the NavBar-->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-primary px-4" routerLink="home-page">Home</a>     <!--Adding the Router links to each component, when the button is pressed it will navigate to each page-->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-primary px-4" routerLink="premier-league-table">Premier League Table</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-primary px-4" routerLink="sort-by-points">Sort by Points</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-primary px-4" routerLink="sort-by-wins">Sort by wins</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-primary px-5" routerLink="sort-by-goals">Sort by Goals</a>
+          </li>
+          <li class="nav-item">
+            <button  class="nav-link btn btn-outline-primary px-5" routerLink="random-match" >Play Random Match</button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-primary px-5" routerLink="sort-by-date" >Sort Played Match by Date</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-primary px-5" routerLink="search-match-by-date" >Search Played Match by Date</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<router-outlet></router-outlet>  <!--Router Outlet to make sure the Routing to each page works-->
+</body>
+</html>
